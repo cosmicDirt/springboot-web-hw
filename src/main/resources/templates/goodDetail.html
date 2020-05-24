@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/goodDetail.css">
+    <script src="js/goodDetail.js"></script>
+</head>
+<body>
+<div class="center_con clearfix">
+    <div class="main_menu fl">
+        <img id="good_imglink" src="/img/image.png">
+    </div>
+    <div class="goods_detail_list fr">
+        <h3 id="good_name">大兴大棚草莓</h3>
+        <p id="good_description">草莓浆果柔软多汁，味美爽口，适合速冻保险贮藏，草莓速冻后，可以保持原有的色、香、味，既便于贮藏，又便于外销。</p>
+
+        <div class="prize_bar">
+            <div class="show_prize fl">￥<em id="one_price">16.80</em></div>
+            <div class="show_unit fl" id="price_unit">单位：500g</div>
+        </div>
+
+        <div class="goods_num clearfix">
+            <div class="num_name fl">数量：</div>
+            <ul class="counter">
+                <li id="minus"><input type="button" onclick="minuser()" value="-"/></li>
+                <li id="countnum">0</li>
+                <li id="plus"><input type="button" onclick="adder()" value="+"/></li>
+            </ul>
+            <div id="stock">（ 库存：0 ）</div>
+        </div>
+        <div class="total">总价：<em id="total_price">0.00元</em></div>
+        <div class="operate_btn">
+            <a href="" class="buy_btn">立即购买</a>
+            <a href="" class="add_cart">加入购物车</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
