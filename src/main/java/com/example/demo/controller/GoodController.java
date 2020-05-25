@@ -114,5 +114,20 @@ public class GoodController {
 
         return map;
     }
+
+    @PostMapping("/good/delFromTrolley")
+    @ResponseBody
+    public Map<String, Object> delFromTrolley(@RequestBody Map<String, String> data) {
+        Map<String, Object> map = new HashMap<>();
+
+        String status = "";
+        String details = "";
+        List<TrolleyGood> list = trolleyGoodDAO.deleteByTrolleyUserAndTrolleyGood(data.get("userName"),Long.parseLong(data.get("goodId")));
+        status = "success";
+        map.put("status", status);
+        map.put("details", details);
+
+        return map;
+    }
 }
 

@@ -72,7 +72,7 @@ window.onload=function goods_list() {
                         "                        <!-- 购物车按钮 -->\n" +
                         "                        <div class=\"btn\">\n" +
                         "                            <a href=\"#\" class=\"cart\">\n" +
-                        "                                <img src=\"img/cart.svg\" onclick=\"toTrolley\("+ list[i].goodId +"\)\">\n" +
+                        "                                <img src=\"img/trolley.jpg\" onclick=\"toTrolley\("+ list[i].goodId +"\)\">\n" +
                         "                            </a>\n" +
                         "                        </div>\n" +
                         "                    </div>\n" +

@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="/css/order.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css"
 </head>
 <body>
 
+<div class="header">
+    <ul>
+        <li><a href="/"> 首 页 </a></li>
+        <li><a href="/trolley"> 购 物 车 </a></li>
+        <li><a href="/order"> 查 看 订 单 </a></li>
+        <li><a href="/login"> 登 录 </a></li>
+        <li><a href="/register"> 注 册 </a></li>
+    </ul>
+</div>
 
-<ul class="btn-numbox">
-    <li><span class="number">数量</span></li>
-    <li>
-        <ul class="count">
-            <li><span id="minus" class="num-jian">-</span></li>
-            <li><input type="text" class="input-num" id="input-num" value="0"/></li>
-            <li><span id="plus" class="num-jia">+</span></li>
-        </ul>
-    </li>
-    <li><span class="kucun">（库存:54）</span></li>　
-</ul>
+<table class="altrowstable" id="alternatecolor">
+    <thead>
+    <tr>
+        <th class="tdone">订单编号</th>
+        <th class="tdtwo">商品名称</th>
+        <th class="tdthree">数量</th>
+        <th class="tdfour">总价</th>
+        <th class="tdfive">创建时间</th>
+        <th class="tdsix">收货地址</th>
+    </tr>
+    </thead>
+    <tbody id="orders">
+
+    </tbody>
+</table>
 
 </body>
 <script src="js/order.js"></script>

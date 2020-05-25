@@ -1,16 +1,20 @@
 package com.example.demo.entity;
 
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Order {
+public class Orders {
 
   private long orderId;
   private String orderBuyerName;
   private long orderGoodId;
   private String createTime;
-  private String orderNote;
+  private String orderAddress;
+  private long orderAmount;
+  private double orderMoney;
+  private String orderGoodName;
 
   @Id
   public long getOrderId() {
@@ -49,12 +53,38 @@ public class Order {
   }
 
 
-  public String getOrderNote() {
-    return orderNote;
+  public String getOrderAddress() {
+    return orderAddress;
   }
 
-  public void setOrderNote(String orderNote) {
-    this.orderNote = orderNote;
+  public void setOrderAddress(String orderAddress) {
+    this.orderAddress = orderAddress;
   }
 
+
+  public long getOrderAmount() {
+    return orderAmount;
+  }
+
+  public void setOrderAmount(long orderAmount) {
+    this.orderAmount = orderAmount;
+  }
+
+
+  public double getOrderMoney() {
+    return orderMoney;
+  }
+
+  public void setOrderMoney(double orderMoney) {
+    this.orderMoney = orderMoney;
+  }
+
+
+  public String getOrderGoodName() {
+    return orderGoodName;
+  }
+
+  public void setOrderGoodName(String orderGoodName) {
+    this.orderGoodName = orderGoodName;
+  }
 }

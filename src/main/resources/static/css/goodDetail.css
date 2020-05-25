@@ -9,10 +9,13 @@
 .center_con .main_menu {
     width: 350px;
     height: 350px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     float: left;
 }
-
+.center_con .main_menu img{
+    height: 100%;
+    width: 100%;
+}
 .goods_detail_list {
     width: 730px;
     height: 350px;

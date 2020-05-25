@@ -1,0 +1,79 @@
+table{
+    width:1200px;
+    position:relative;
+    margin:30px auto;
+    border-collapse: collapse;
+    border:1px solid gray;
+}
+th{
+    background: cornflowerblue;
+    height:2.5em;
+}
+<!--  表格  -->
+
+table.altrowstable {
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    border-width: 1px;
+    border-color: #a9c6c9;
+    border-collapse: collapse;
+}
+
+table.altrowstable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+
+table.altrowstable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+
+.oddrowcolor {
+    background-color: #d4e3e5;
+}
+
+.evenrowcolor {
+    background-color: #c3dde0;
+}
+
+
+.tdone {
+    width: 10%;
+}
+
+.tdtwo {
+    width: 20%;
+}
+
+.tdthree {
+    width: 10%;
+}
+
+.tdfour {
+    width: 10%;
+}
+
+.tdfive {
+    width: 20%;
+}
+
+.tdsix {
+    width: 30%;
+}
+
+td {
+    height: 2em;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+
+.talast {
+    text-align: left;
+}
