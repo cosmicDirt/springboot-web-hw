@@ -25,7 +25,7 @@ public class OrderController {
     public Map<String, Object> createOrder(@RequestBody Map<String, String> data) {
         Map<String, Object> map = new HashMap<>();
 
-        String status = "error";
+        String status = "";
         String details = "";
         Orders orders=new Orders();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式

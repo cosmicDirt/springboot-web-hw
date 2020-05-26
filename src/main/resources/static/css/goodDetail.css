@@ -1,9 +1,11 @@
 
 .center_con {
     width: 1200px;
-    height: 550px;
-    margin: 0 auto;
-    /*background: yellow;*/
+    height: 440px;
+    margin: 50px auto;
+    padding: 30px;
+    border-bottom: 1px solid #262626;
+    border-top: 1px solid #262626;
 }
 
 .center_con .main_menu {

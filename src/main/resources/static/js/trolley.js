@@ -1,4 +1,5 @@
 var goodlist=[];
+var init_sum=0;
 window.onload=function getTrolley() {
     var user=localStorage.getItem("userName");
     var data = JSON.stringify({"userName":user});
@@ -15,7 +16,6 @@ window.onload=function getTrolley() {
             if (status === "success") {
                 let list = json.list;
                 goodlist=list;
-                var init_sum=0;
                 for (i = 0; i < list.length; i++) {
                     init_sum+=list[i].goodPrice;
                     goodlist[i]["goodAmount"]=1;
@@ -64,14 +64,18 @@ function minus(i,price) {
     {
         val=1;
     }
-    else {
-        goodlist[i].goodAmount--;
+    goodlist[i].goodAmount--;
+    if(goodlist[i].goodAmount<=1)
+    {
+        goodlist[i].goodAmount=1;
     }
     document.getElementById(id).innerHTML=val;
     var total=val*price;
     document.getElementById("total_price"+i).innerHTML="￥"+total+".0";
     var sum=document.getElementById("sum_price").innerHTML;
-    document.getElementById("sum_price").innerHTML=parseInt(sum)-price;
+    if(parseInt(sum)-price>=init_sum) {
+        document.getElementById("sum_price").innerHTML = parseInt(sum) - price;
+    }
 }
 function delGood(i,id) {
     goodlist.pop(i);
@@ -100,14 +104,17 @@ function delGood(i,id) {
             }
         }
     }
+    init_sum=init_sum-tol;
+    location.reload();
 }
 
 function banlance() {
     var user = localStorage.getItem("userName");
+    var address=prompt("请输入收货地址！");
     for(i=0;i<goodlist.length;i++) {
         var data = JSON.stringify({"userName": user, "goodId": goodlist[i].goodId,
             "orderAmount":goodlist[i].goodAmount,"orderMoney":goodlist[i].goodPrice*goodlist[i].goodAmount,
-            "orderAddress":"","goodName":goodlist[i].goodName});
+            "orderAddress":address,"goodName":goodlist[i].goodName});
         var xml = new XMLHttpRequest();
         xml.open("POST", "/order/createOrder", true);
         xml.setRequestHeader("Content-type", "application/json;charset-UTF-8");

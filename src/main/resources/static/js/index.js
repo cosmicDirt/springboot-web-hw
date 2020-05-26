@@ -41,10 +41,13 @@ function toTrolley(id){
             }
         }
     }
-
 }
 
 window.onload=function goods_list() {
+    if(localStorage.getItem("userName")===null||""||undefined)
+    {
+        window.open("/login","_self")
+    }
     var data=JSON.stringify({});
     var xml=new XMLHttpRequest();
     xml.open("POST","/good/getGoodsList",true);

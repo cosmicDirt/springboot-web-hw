@@ -6,13 +6,13 @@ function check() {
     let a = document.getElementsByTagName("input")[0].value;
     let b = document.getElementsByTagName("input")[1].value;
     if (!a && !b) { //用户框value值和密码框value值都为空
-        document.getElementsByTagName("input")[0].setAttribute("placeholder", "请输入账号！");
+        alert("请输入用户名和密码！")
         return false; //只有返回true表单才会提交
     } else if (!a) { //用户框value值为空
-        document.getElementById("remind1").innerHTML = "请输入用户名！";
+        alert("请输入用户名！")
         return false;
     } else if (!b) { //密码框value值为空
-        document.getElementById("remind2").innerHTML = "请输入密码！";
+        alert("请输入密码！")
         return false;
     } else {
         var data=JSON.stringify({"userName":a,"password":b});
@@ -26,8 +26,6 @@ function check() {
                 var json = eval("("+res+")");
                 let status = json.status;
                 let details=json.details;
-                alert(status);
-                alert(details);
                 if (status === "success") {
                     window.open("/","_self")
                     localStorage.setItem("userName", a);
