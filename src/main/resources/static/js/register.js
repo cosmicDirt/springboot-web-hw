@@ -14,12 +14,14 @@ function check() {
     } else if (!b) { //密码框value值为空
         alert("请输入密码！")
         return false;
+
     } else {
         var data=JSON.stringify({"userName":a,"password":b});
         var xml=new XMLHttpRequest();
         xml.open("POST","/user/register",true);
         xml.setRequestHeader("Content-type","application/json;charset-UTF-8");
         xml.send(data);
+        alert("注册成功，请登录！");
         xml.onreadystatechange = function(){
             if (xml.readyState === 4 && xml.status === 200) {
                 var res = xml.responseText;
@@ -27,13 +29,13 @@ function check() {
                 let status = json.status;
                 let details=json.details;
                 if (status === "success") {
-                    window.open("/login","_self")
-                    alert("注册成功，请登录！")
+                    window.open("/login","_self");
                 }
                 else{
                     alert(details);
                 }
             }
         }
+        return true;
     }
 }

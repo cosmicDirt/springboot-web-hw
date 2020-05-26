@@ -105,7 +105,6 @@ function delGood(i,id) {
         }
     }
     init_sum=init_sum-tol;
-    location.reload();
 }
 
 function banlance() {

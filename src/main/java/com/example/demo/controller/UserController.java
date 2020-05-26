@@ -48,7 +48,6 @@ public class UserController {
         String status = "error";
         String details = "";
 
-
         List<User> list = userDAO.findByUserName(data.get("userName"));
         if (list.isEmpty()) {
             u.setUserName(data.get("userName"));
